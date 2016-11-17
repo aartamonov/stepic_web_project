@@ -1,4 +1,10 @@
-bind = "0.0.0.0:8080"
-workers = 2
-working_dir = "/home/cahek/webProg/web"
-
+CONFIG = {
+	'mode': 'wsgi',
+	'working_dir': '/home/cahek/webProg/web',
+	'args': (
+		'--bind=0.0.0.0:8080',
+		'--daemon',
+		'--workers=2',
+		'hello:app'
+	)
+}
